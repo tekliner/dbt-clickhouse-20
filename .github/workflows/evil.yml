@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ secrets.GH_ACTIONS_HARBOR_LOGIN }}
